@@ -2,17 +2,20 @@ package ca.bcit.comp2522.bookstore;
 
 public class Person implements Comparable<Person>, Printable, Reversible
 {
-    public final Date dateOfBirth;
-    public Date dateOfDeath;
+    private final Name name;
+    private final Date dateOfBirth;
+    private Date dateOfDeath;
 
     /**
      * Creates and initializes a person with a birth date and a death date.
      *
+     * @param name the person's name
      * @param dateOfBirth the person's birth date
      * @param dateOfDeath the person's death date
      */
-    public Person(final Date dateOfBirth, final Date dateOfDeath)
+    public Person(final Name name, final Date dateOfBirth, final Date dateOfDeath)
     {
+        this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.dateOfDeath = dateOfDeath;
     }
@@ -20,11 +23,12 @@ public class Person implements Comparable<Person>, Printable, Reversible
     /**
      * Creates and initializes a Person with a birth date (this person is still alive)
      *
+     * @param name The person's name
      * @param dateOfBirth The person's birth date
      */
-    public Person(final Date dateOfBirth)
+    public Person(final Name name, final Date dateOfBirth)
     {
-        this(dateOfBirth, null);
+        this(name, dateOfBirth, null);
     }
 
     /**
