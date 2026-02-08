@@ -52,13 +52,13 @@ public class Author extends Person implements Printable
         }
     }
 
+    /**
+     * Prints the Auther and Genre.
+     */
     @Override
     public void display() {
-        //whoop whoop implement
-    }
-
-    @Override
-    public void backward() {
-        //whoop whoop implement
+        System.out.print("Author ");
+        super.display();
+        System.out.println("Genre: " + genre + ".");
     }
 }

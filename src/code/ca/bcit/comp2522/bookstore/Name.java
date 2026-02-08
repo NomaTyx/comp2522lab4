@@ -34,6 +34,9 @@ public class Name implements Printable
         }
     }
 
+    /**
+     * Prints the full name.
+     */
     @Override
     public void display()
     {

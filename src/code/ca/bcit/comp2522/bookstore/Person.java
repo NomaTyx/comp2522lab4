@@ -98,6 +98,9 @@ public class Person implements Comparable<Person>, Printable, Reversible
         return dateOfBirth;
     }
 
+    /**
+     * Prints all attributes in a sentence.
+     */
     @Override
     public void display()
     {
@@ -112,12 +115,15 @@ public class Person implements Comparable<Person>, Printable, Reversible
             deathText = "died on " + dateOfDeath.toString();
         }
 
-        System.out.println("Person " + name.toString()
+        System.out.println(name.toString()
                 + " was born on " + dateOfBirth.toString()
                 + " and is " + deathText + ".");
 
     }
 
+    /**
+     * Prints the full name backward.
+     */
     @Override
     public void backward()
     {
