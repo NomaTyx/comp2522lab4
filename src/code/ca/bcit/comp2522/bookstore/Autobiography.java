@@ -2,14 +2,6 @@ package ca.bcit.comp2522.bookstore;
 
 /**
  * Represents an autobiography.
- *
- * @author Julia Ziebart
- * @author Mayvee Tran
- *
- * @version 1.0
- */
-/**
- * Represents an autobiography.
  * The subject of the biography is automatically the author.
  *
  * @author Julia Ziebart
