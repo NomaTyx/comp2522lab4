@@ -99,12 +99,29 @@ public class Person implements Comparable<Person>, Printable, Reversible
     }
 
     @Override
-    public void display() {
-        //whoop whoop implement
+    public void display()
+    {
+        final String deathText;
+
+        if(dateOfDeath == null)
+        {
+            deathText = "still alive";
+        }
+        else
+        {
+            deathText = "died on " + dateOfDeath.toString();
+        }
+
+        System.out.println("Person " + name.toString()
+                + " was born on " + dateOfBirth.toString()
+                + " and is " + deathText + ".");
+
     }
 
     @Override
-    public void backward() {
-        //whoop whoop implement
+    public void backward()
+    {
+        final String fullName = name.toString();
+        System.out.println(new StringBuilder(fullName).reverse().toString());
     }
 }
