@@ -55,5 +55,11 @@ public class Author extends Person implements Printable
     @Override
     public String print() {
         //whoop whoop implement
+        return "";
+    }
+
+    @Override
+    public void reverse() {
+        //whoop whoop implement
     }
 }

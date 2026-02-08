@@ -85,4 +85,15 @@ public class Book implements Comparable<Book>, Printable, Reversible
     {
         return author;
     }
+
+    @Override
+    public String print() {
+        //whoop whoop implement
+        return "";
+    }
+
+    @Override
+    public void reverse() {
+        //whoop whoop implement
+    }
 }

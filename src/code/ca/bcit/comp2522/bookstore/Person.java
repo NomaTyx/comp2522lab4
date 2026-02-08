@@ -97,4 +97,15 @@ public class Person implements Comparable<Person>, Printable, Reversible
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
+
+    @Override
+    public String print() {
+        //whoop whoop implement
+        return "";
+    }
+
+    @Override
+    public void reverse() {
+        //whoop whoop implement
+    }
 }
