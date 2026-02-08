@@ -99,13 +99,12 @@ public class Person implements Comparable<Person>, Printable, Reversible
     }
 
     @Override
-    public String print() {
+    public void display() {
         //whoop whoop implement
-        return "";
     }
 
     @Override
-    public void reverse() {
+    public void backward() {
         //whoop whoop implement
     }
 }

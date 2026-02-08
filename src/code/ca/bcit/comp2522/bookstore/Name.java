@@ -36,12 +36,6 @@ public class Name implements Printable
 
     @Override
     public void display() {
-
-    }
-
-    @Override
-    public String print() {
         //whoop whoop implement
-        return "";
     }
 }

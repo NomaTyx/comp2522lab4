@@ -8,7 +8,7 @@ package ca.bcit.comp2522.bookstore;
  *
  * @version 1.0
  */
-public class Date
+public class Date implements Printable
 {
     private static final int MINIMUM_YEAR = 1800;
 
@@ -360,5 +360,10 @@ public class Date
             }
         }
         return false;
+    }
+
+    @Override
+    public void display() {
+
     }
 }

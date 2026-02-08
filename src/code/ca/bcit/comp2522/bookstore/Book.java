@@ -87,13 +87,12 @@ public class Book implements Comparable<Book>, Printable, Reversible
     }
 
     @Override
-    public String print() {
+    public void display() {
         //whoop whoop implement
-        return "";
     }
 
     @Override
-    public void reverse() {
+    public void backward() {
         //whoop whoop implement
     }
 }

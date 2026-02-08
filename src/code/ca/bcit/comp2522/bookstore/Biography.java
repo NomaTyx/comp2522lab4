@@ -20,5 +20,10 @@ public class Biography extends Book
     {
         super(title, yearPublished, author);
     }
+
+    @Override
+    public void display() {
+
+    }
 }
 

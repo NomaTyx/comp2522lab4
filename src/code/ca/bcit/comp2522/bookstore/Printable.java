@@ -12,8 +12,6 @@ public interface Printable
 {
     /**
      * Returns a printable String representation of the object.
-     *
-     * @return printable String
      */
-    String print();
+    void display();
 }

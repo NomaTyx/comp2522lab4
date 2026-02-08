@@ -8,7 +8,7 @@ package ca.bcit.comp2522.bookstore;
  *
  * @version 1.0
  */
-public class Autobiography extends Biography
+public class Autobiography extends Biography implements Printable
 {
     /**
      * Constructs an Autobiography.
@@ -19,5 +19,10 @@ public class Autobiography extends Biography
     public Autobiography(final String title, final int yearPublished, final Author author)
     {
         super(title, yearPublished, author);
+    }
+
+    @Override
+    public void display() {
+
     }
 }

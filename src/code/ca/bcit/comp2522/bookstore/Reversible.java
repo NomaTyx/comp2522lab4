@@ -13,6 +13,6 @@ public interface Reversible
     /**
      * Reverses the state of the object.
      */
-    void reverse();
+    void backward();
 }
 
