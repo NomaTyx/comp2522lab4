@@ -1,5 +1,11 @@
 package ca.bcit.comp2522.bookstore;
 
+/**
+ * Represents a person
+ *
+ * @author Julia Ziebart
+ * @author Mayvee Tran
+ */
 public class Person implements Comparable<Person>, Printable, Reversible
 {
     private final Name name;
@@ -15,6 +21,8 @@ public class Person implements Comparable<Person>, Printable, Reversible
      */
     public Person(final Name name, final Date dateOfBirth, final Date dateOfDeath)
     {
+        validateDateOfBirth(dateOfBirth);
+
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.dateOfDeath = dateOfDeath;
@@ -52,6 +60,10 @@ public class Person implements Comparable<Person>, Printable, Reversible
         {
             throw new IllegalArgumentException("DOB can't be null");
         }
+
+        if(dateOfBirth.isAfter(Date.getCurrentDate())) {
+            throw new IllegalArgumentException("Invalid date.");
+        }
     }
 
     /**
@@ -63,7 +75,26 @@ public class Person implements Comparable<Person>, Printable, Reversible
     @Override
     public int compareTo(final Person other)
     {
-        //TODO: implement lmao
-        return 0;
+        //magic numbers are used because we discussed previously that these numbers are convention
+        if(dateOfBirth.isAfter(other.getDateOfBirth()))
+        {
+            return -1;
+        }
+        else if(other.getDateOfBirth().isAfter(dateOfBirth))
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    /**
+     * Returns this person's date of birth.
+     * @return the date of birth as a Date
+     */
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 }

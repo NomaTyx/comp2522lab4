@@ -2,4 +2,5 @@ package ca.bcit.comp2522.bookstore;
 
 public class Biography extends Book
 {
+    public Biography()
 }

@@ -5,14 +5,12 @@ package ca.bcit.comp2522.bookstore;
  *
  * @author Julia Ziebart
  * @author Mayvee Tran
- * *
+ *
  * @version 1.0
  */
-public class Date implements Printable
+public class Date
 {
-
     private static final int MINIMUM_YEAR = 1800;
-    public static final int CURRENT_YEAR = 2025;
 
     private static final int MINIMUM_MONTH = 1;
     private static final int NUMBER_OF_MONTHS = 12;
@@ -51,10 +49,6 @@ public class Date implements Printable
     //I don't have a fantastic name for this. suggestions are welcomed.
     private static final int LEAP_YEAR_RESUME_FREQUENCY = 400;
 
-    private final int day;
-    private final int month;
-    private final int year;
-
     //these are some constants required for the algorithm used to calculate the day of the week.
     private static final int ADD_IF_MILLENNIUM_IS_2000 = 6;
     private static final int ADD_IF_JAN_FEB_LEAP_YEAR = 6;
@@ -78,6 +72,14 @@ public class Date implements Printable
     private static final int ALGORITHM_WED = 4;
     private static final int ALGORITHM_THU = 5;
     private static final int ALGORITHM_FRI = 6;
+
+    public static final int CURRENT_YEAR = 2025;
+    public static final int CURRENT_MONTH = JANUARY;
+    public static final int CURRENT_DAY = 27;
+
+    private final int day;
+    private final int month;
+    private final int year;
 
     /**
      * Constructor. Generates a date based on the given parameters, if valid.
@@ -157,7 +159,7 @@ public class Date implements Printable
         dayOfWeekTracker = 0;
 
         //then we need to calculate the last two digits of the year.
-        final int lastTwoDigitsOfYear;
+        int lastTwoDigitsOfYear;
         lastTwoDigitsOfYear = year % LAST_TWO_DIGITS_OF_YEAR_DIVISOR;
 
         //if it's a leap year, we need to add 6
@@ -226,10 +228,7 @@ public class Date implements Printable
             return "Friday";
         }
         //not really sure what else to throw. I tried to throw Exception but Java did not like it.
-        else
-        {
-            throw new IllegalArgumentException("Error calculating day of week!");
-        }
+        throw new IllegalArgumentException("Error calculating day of week!");
     }
 
     /**
@@ -241,17 +240,11 @@ public class Date implements Printable
      */
     public static boolean isLeapYear(final int year)
     {
-        return year % LEAP_YEAR_FREQUENCY == 0 && year % LEAP_YEAR_SKIP_FREQUENCY != 0 ||
-                year % LEAP_YEAR_RESUME_FREQUENCY == 0;
+        return year % LEAP_YEAR_FREQUENCY == 0 && year % LEAP_YEAR_SKIP_FREQUENCY != 0
+                || year % LEAP_YEAR_RESUME_FREQUENCY == 0;
     }
 
-    /*
-     * validates the full date
-     *
-     * @param year the year component
-     * @param month the month component
-     * @param day the day component
-     */
+    //validates the full date
     private static void validateDate(final int year,
                                      final int month,
                                      final int day)
@@ -336,5 +329,36 @@ public class Date implements Printable
     public String toString()
     {
         return getDayOfWeek() + ", " + getYYYYMMDD();
+    }
+
+    /**
+     * Returns today's date. This is a bit of a hacky solution and I'd rather use Java's Date class, but I'm told
+     * we are not allowed to do that.
+     * @return Today's date.
+     */
+    public static Date getCurrentDate() {
+        return new Date(CURRENT_YEAR, CURRENT_MONTH, CURRENT_DAY);
+    }
+
+    /**
+     * Compares this date to another date and returns true if this one is further in the future.
+     * @param otherDate the date to compare to
+     * @return whether or not the current date is after the supplied one
+     */
+    public boolean isAfter(final Date otherDate) {
+        if(year > otherDate.getYear()) {
+            return true;
+        }
+        else if (year == otherDate.getYear()) {
+            if(month > otherDate.getMonth()) {
+                return true;
+            }
+            else if (month == otherDate.getMonth()) {
+                if(day > otherDate.getDay()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
