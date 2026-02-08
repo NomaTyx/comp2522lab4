@@ -15,7 +15,7 @@ public class Name implements Printable
     private final String last;
 
     /**
-     * Creates a {@code Name} with a first and last name.
+     * Creates a name with a first and last name.
      *
      * @param first the first name (not null, not blank, less than 50 characters)
      * @param last  the last name (not null, not blank, less than 50 characters)

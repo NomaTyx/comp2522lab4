@@ -8,21 +8,33 @@ package ca.bcit.comp2522.bookstore;
  *
  * @version 1.0
  */
-public class Autobiography extends Biography implements Printable
+/**
+ * Represents an autobiography.
+ * The subject of the biography is automatically the author.
+ *
+ * @author Julia Ziebart
+ * @author Mayvee Tran
+ * @version 1.0
+ */
+public class Autobiography extends Biography
 {
     /**
-     * Constructs an Autobiography.
+     * Creates an autobiography.
+     * The subject is automatically set to the author.
      *
-     * @param title  the title
-     * @param author the author
+     * @param title the title of the autobiography
+     * @param yearPublished the year the book was published
+     * @param author the author of the autobiography
+     * @throws IllegalArgumentException if author is null
      */
     public Autobiography(final String title, final int yearPublished, final Author author)
     {
-        super(title, yearPublished, author);
+        super(title, yearPublished, author, author);
     }
 
     /**
-     * Prints the book and author's information.
+     * Displays the autobiography information.
+     * This includes the book details and the author's information.
      */
     @Override
     public void display()
