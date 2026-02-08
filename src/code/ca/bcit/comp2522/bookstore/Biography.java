@@ -1,6 +1,24 @@
 package ca.bcit.comp2522.bookstore;
 
+/**
+ * Represents a biography.
+ *
+ * @author Julia Ziebart
+ * @author Mayvee Tran
+ *
+ * @version 1.0
+ */
 public class Biography extends Book
 {
-    public Biography()
+    /**
+     * Constructs a Biography.
+     *
+     * @param title  the title
+     * @param author the author
+     */
+    public Biography(final String title, final Author author)
+    {
+        super(title, author);
+    }
 }
+
