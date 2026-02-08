@@ -16,9 +16,9 @@ public class Biography extends Book
      * @param title  the title
      * @param author the author
      */
-    public Biography(final String title, final Author author)
+    public Biography(final String title, final int yearPublished, final Author author)
     {
-        super(title, author);
+        super(title, yearPublished, author);
     }
 }
 
