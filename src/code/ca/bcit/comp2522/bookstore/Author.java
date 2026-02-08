@@ -51,4 +51,9 @@ public class Author extends Person implements Printable
             throw new IllegalArgumentException("Genre is invalid.");
         }
     }
+
+    @Override
+    public String print() {
+        //whoop whoop implement
+    }
 }
