@@ -4,7 +4,7 @@ package ca.bcit.comp2522.bookstore;
  * A representation of an author.
  *
  * @author Julia Ziebart
- * @author Mayvee Tran
+ * @author Mayvee Tan
  *
  * @version 1.0
  */

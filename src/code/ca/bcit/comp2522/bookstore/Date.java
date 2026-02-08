@@ -4,7 +4,7 @@ package ca.bcit.comp2522.bookstore;
  * Represents a date containing a day, a month, and a year.
  *
  * @author Julia Ziebart
- * @author Mayvee Tran
+ * @author Mayvee Tan
  *
  * @version 1.0
  */
@@ -365,6 +365,6 @@ public class Date implements Printable
     @Override
     public void display()
     {
-        System.out.println("Date: " + toString() + ".");
+        System.out.println("Date: " + this + ".");
     }
 }

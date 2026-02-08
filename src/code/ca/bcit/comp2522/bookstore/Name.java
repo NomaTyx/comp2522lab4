@@ -4,7 +4,7 @@ package ca.bcit.comp2522.bookstore;
  * Represents a first name and last name.
  *
  * @author Julia Ziebart
- * @author Mayvee Tran
+ * @author Mayvee Tan
  * @version 1.0
  */
 public class Name implements Printable

@@ -5,7 +5,7 @@ package ca.bcit.comp2522.bookstore;
  * The subject of the biography is automatically the author.
  *
  * @author Julia Ziebart
- * @author Mayvee Tran
+ * @author Mayvee Tan
  * @version 1.0
  */
 public class Autobiography extends Biography

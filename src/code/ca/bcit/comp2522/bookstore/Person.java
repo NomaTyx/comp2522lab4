@@ -4,7 +4,7 @@ package ca.bcit.comp2522.bookstore;
  * Represents a person
  *
  * @author Julia Ziebart
- * @author Mayvee Tran
+ * @author Mayvee Tan
  */
 public class Person implements Comparable<Person>, Printable, Reversible
 {
@@ -112,7 +112,7 @@ public class Person implements Comparable<Person>, Printable, Reversible
         }
         else
         {
-            deathText = "died on " + dateOfDeath.toString();
+            deathText = "died on " + dateOfDeath;
         }
 
         System.out.println(name.toString()
@@ -128,6 +128,6 @@ public class Person implements Comparable<Person>, Printable, Reversible
     public void backward()
     {
         final String fullName = name.toString();
-        System.out.println(new StringBuilder(fullName).reverse().toString());
+        System.out.println(new StringBuilder(fullName).reverse());
     }
 }

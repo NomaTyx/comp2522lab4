@@ -97,6 +97,6 @@ public class Book implements Comparable<Book>, Printable, Reversible
     @Override
     public void backward()
     {
-        System.out.println(new StringBuilder(title).reverse().toString());
+        System.out.println(new StringBuilder(title).reverse());
     }
 }
