@@ -363,7 +363,8 @@ public class Date implements Printable
     }
 
     @Override
-    public void display() {
-
+    public void display()
+    {
+        System.out.println("Date: " + toString() + ".");
     }
 }

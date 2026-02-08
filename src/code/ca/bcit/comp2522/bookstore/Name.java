@@ -35,7 +35,8 @@ public class Name implements Printable
     }
 
     @Override
-    public void display() {
-        //whoop whoop implement
+    public void display()
+    {
+        System.out.println("Name: " + first + " " + last + ".");
     }
 }
