@@ -21,8 +21,13 @@ public class Autobiography extends Biography implements Printable
         super(title, yearPublished, author);
     }
 
+    /**
+     * Prints the book and author's information.
+     */
     @Override
-    public void display() {
-
+    public void display()
+    {
+        System.out.print("Autobiography: ");
+        super.display();
     }
 }

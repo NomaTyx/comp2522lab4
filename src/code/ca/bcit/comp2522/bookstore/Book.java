@@ -87,12 +87,16 @@ public class Book implements Comparable<Book>, Printable, Reversible
     }
 
     @Override
-    public void display() {
-        //whoop whoop implement
+    public void display()
+    {
+        System.out.print("Book \"" + title + "\" was published in "
+                + yearPublished + " and was written by ");
+        author.display();
     }
 
     @Override
-    public void backward() {
-        //whoop whoop implement
+    public void backward()
+    {
+        System.out.println(new StringBuilder(title).reverse().toString());
     }
 }
