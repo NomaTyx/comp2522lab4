@@ -19,7 +19,9 @@ public class Person implements Comparable<Person>, Printable, Reversible
      * @param dateOfBirth the person's birth date
      * @param dateOfDeath the person's death date
      */
-    public Person(final Name name, final Date dateOfBirth, final Date dateOfDeath)
+    public Person(final Name name,
+                  final Date dateOfBirth,
+                  final Date dateOfDeath)
     {
         validateDateOfBirth(dateOfBirth);
 
@@ -54,7 +56,8 @@ public class Person implements Comparable<Person>, Printable, Reversible
      * @param dateOfBirth the date to validate
      * @throws IllegalArgumentException if the date is invalid
      */
-    private static void validateDateOfBirth(final Date dateOfBirth) throws IllegalArgumentException
+    private static void validateDateOfBirth(final Date dateOfBirth)
+            throws IllegalArgumentException
     {
         if(dateOfBirth == null)
         {
@@ -98,6 +101,11 @@ public class Person implements Comparable<Person>, Printable, Reversible
         return dateOfBirth;
     }
 
+    public Name getName()
+    {
+        return name;
+    }
+
     /**
      * Prints all attributes in a sentence.
      */
@@ -108,7 +116,7 @@ public class Person implements Comparable<Person>, Printable, Reversible
 
         if(dateOfDeath == null)
         {
-            deathText = "still alive";
+            deathText = " is still alive";
         }
         else
         {
@@ -117,7 +125,7 @@ public class Person implements Comparable<Person>, Printable, Reversible
 
         System.out.println(name.toString()
                 + " was born on " + dateOfBirth.toString()
-                + " and is " + deathText + ".");
+                + " and " + deathText + ".");
 
     }
 

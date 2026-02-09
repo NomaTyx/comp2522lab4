@@ -37,7 +37,9 @@ public class Name implements Printable
      * @param label what part of the name is being validated
      * @throws IllegalArgumentException of the name is invalid
      */
-    private static void validateNamePart(final String value, final String label) throws IllegalArgumentException
+    private static void validateNamePart(final String value,
+                                         final String label)
+            throws IllegalArgumentException
     {
         if(value == null || value.isBlank())
         {

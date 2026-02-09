@@ -15,7 +15,10 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @param yearPublished
      * @param author
      */
-    public Book(final String title, final int yearPublished, final Author author) {
+    public Book(final String title,
+                final int yearPublished,
+                final Author author)
+    {
         validateTitle(title);
         validateYearPublished(yearPublished);
         validateAuthor(author);
@@ -30,9 +33,10 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @param title
      * @throws IllegalArgumentException
      */
-    private static void validateTitle(final String title) throws IllegalArgumentException
+    private static void validateTitle(final String title)
+            throws IllegalArgumentException
     {
-        if(title == null || title.isBlank() || title.length() <= MAX_TITLE_LENGTH) {
+        if(title == null || title.isBlank() || title.length() > MAX_TITLE_LENGTH) {
             throw new IllegalArgumentException("Invalid title");
         }
     }
@@ -42,7 +46,8 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @param yearPublished
      * @throws IllegalArgumentException
      */
-    private static void validateYearPublished(final int yearPublished) throws IllegalArgumentException
+    private static void validateYearPublished(final int yearPublished)
+            throws IllegalArgumentException
     {
         if(yearPublished < MINIMUM_YEAR_PUBLISHED || yearPublished > Date.CURRENT_YEAR) {
             throw new IllegalArgumentException("Invalid publication year");
@@ -54,7 +59,8 @@ public class Book implements Comparable<Book>, Printable, Reversible
      * @param author
      * @throws IllegalArgumentException
      */
-    private static void validateAuthor(final Author author) throws IllegalArgumentException
+    private static void validateAuthor(final Author author)
+            throws IllegalArgumentException
     {
         if(author == null)
         {
@@ -110,8 +116,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
     public void display()
     {
         System.out.print("Book \"" + title + "\" was published in "
-                + yearPublished + " and was written by ");
-        author.display();
+                + yearPublished + " and was written by " + author.getName().toString());
     }
 
     /**

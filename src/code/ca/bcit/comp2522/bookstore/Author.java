@@ -22,7 +22,10 @@ public class Author extends Person implements Printable
      * @param deathDate the author's death date
      * @param genre the genre the author writes in
      */
-    public Author(final Name name, final Date birthDate, final Date deathDate, final String genre)
+    public Author(final Name name,
+                  final Date birthDate,
+                  final Date deathDate,
+                  final String genre)
     {
         super(name, birthDate, deathDate);
         this.genre = genre;
@@ -35,7 +38,9 @@ public class Author extends Person implements Printable
      * @param birthDate the author's birth date
      * @param genre the genre the author wrote in.
      */
-    public Author(final Name name, final Date birthDate, final String genre)
+    public Author(final Name name,
+                  final Date birthDate,
+                  final String genre)
     {
         this(name, birthDate, null, genre);
     }
@@ -45,7 +50,8 @@ public class Author extends Person implements Printable
      * @param genre The string to check
      * @throws IllegalArgumentException If the string is invalid
      */
-    private static void validateGenre(final String genre) throws IllegalArgumentException
+    private static void validateGenre(final String genre)
+            throws IllegalArgumentException
     {
         if(genre == null || genre.isBlank() || genre.length() > MAX_GENRE_LENGTH)
         {

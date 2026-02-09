@@ -19,7 +19,9 @@ public class Autobiography extends Biography
      * @param author the author of the autobiography
      * @throws IllegalArgumentException if author is null
      */
-    public Autobiography(final String title, final int yearPublished, final Author author)
+    public Autobiography(final String title,
+                         final int yearPublished,
+                         final Author author)
     {
         super(title, yearPublished, author, author);
     }
