@@ -15,7 +15,8 @@ public class Main
         Date deathLee = new Date(2016, 2, 19);
 
         Name nameJaneAusten = new Name("Jane", "Austen");
-        Date birthAusten = new Date(1775, 12, 16);
+        //date class does not support years before 1800.
+        Date birthAusten = new Date(1800, 12, 16);
         Date deathAusten = new Date(1817, 7, 18);
 
         Name nameScottFitzgerald = new Name("F. Scott", "Fitzgerald");
@@ -52,7 +53,8 @@ public class Main
         Date birthChernow = new Date(1949, 3, 3);
 
         Name nameAlexanderHamilton = new Name("Alexander", "Hamilton");
-        Date birthHamilton = new Date(1755, 1, 11);
+        //Date class does not support dates before feb 23rd 1800. data has been modified to account for this.
+        Date birthHamilton = new Date(1801, 1, 11);
         Date deathHamilton = new Date(1804, 7, 12);
 
         Name nameAlbertEinstein = new Name("Albert", "Einstein");
@@ -141,6 +143,22 @@ public class Main
         autoAngelou.backward();
         autoMalcolmX.backward();
 
+        book1984.display();
+        bookToKillAMockingbird.display();
+        bookPrideAndPrejudice.display();
+        bookGreatGatsby.display();
+        bookMobyDick.display();
 
+        bioPowerBroker.display();
+        bioSteveJobs.display();
+        bioChurchill.display();
+        bioHamilton.display();
+        bioEinstein.display();
+
+        autoAnneFrank.display();
+        autoMandela.display();
+        autoGandhi.display();
+        autoAngelou.display();
+        autoMalcolmX.display();
     }
 }
