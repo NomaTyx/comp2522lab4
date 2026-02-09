@@ -63,6 +63,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
     }
 
     /**
+     * Compares two books. Older books are considered bigger.
      *
      * @param other the object to be compared.
      * @return
@@ -71,21 +72,40 @@ public class Book implements Comparable<Book>, Printable, Reversible
         return other.getYearPublished() - yearPublished;
     }
 
+    /**
+     * Returns the year the book was published.
+     *
+     * @return The year as an int
+     */
     public int getYearPublished()
     {
         return yearPublished;
     }
 
+    /**
+     * Returns the title of the book.
+     *
+     * @return The title
+     */
     public String getTitle()
     {
         return title;
     }
 
+    /**
+     * Returns the author of the book.
+     *
+     * @return the author
+     */
     public Author getAuthor()
     {
         return author;
     }
 
+    /**
+     * Prints out a String representation of this book following the format "Book "[title]"
+     * was published in [year] and written by [author].
+     */
     @Override
     public void display()
     {
@@ -94,6 +114,9 @@ public class Book implements Comparable<Book>, Printable, Reversible
         author.display();
     }
 
+    /**
+     * Prints out the title of the book reversed.
+     */
     @Override
     public void backward()
     {

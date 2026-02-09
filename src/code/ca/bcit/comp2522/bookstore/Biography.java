@@ -29,11 +29,20 @@ public class Biography extends Book
         this.subject = subject;
 
     }
+
+    /**
+     * Gets the person the biography is written about.
+     *
+     * @return The subject of the biography.
+     */
     public Person getSubject()
     {
         return subject;
     }
 
+    /**
+     * @InheritDoc This object is a biography.
+     */
     @Override
     public void display()
     {
@@ -44,7 +53,7 @@ public class Biography extends Book
     }
 
     /**
-     * Two biographies are equal if they are about the same subject.
+     * Compares two biographies. Two biographies are equal if they are about the same subject.
      */
     @Override
     public boolean equals(final Object obj)
@@ -60,6 +69,7 @@ public class Biography extends Book
         }
 
         final Biography other = (Biography) obj;
+
         return subject.equals(other.subject);
     }
 }

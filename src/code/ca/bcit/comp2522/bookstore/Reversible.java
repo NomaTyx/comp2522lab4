@@ -11,7 +11,7 @@ package ca.bcit.comp2522.bookstore;
 public interface Reversible
 {
     /**
-     * Reverses the state of the object.
+     * Reverses the label of the object.
      */
     void backward();
 }

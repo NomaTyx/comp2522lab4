@@ -11,7 +11,7 @@ package ca.bcit.comp2522.bookstore;
 public interface Printable
 {
     /**
-     * Returns a printable String representation of the object.
+     * Prints a String representation of the object.
      */
     void display();
 }

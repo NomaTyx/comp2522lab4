@@ -15,27 +15,28 @@ public class Author extends Person implements Printable
     private static final int MAX_GENRE_LENGTH = 30;
 
     /**
+     * Creates and initializes an author who is not alive
      *
-     * @param name
-     * @param birthDate
-     * @param deathDate
-     * @param genre
+     * @param name the author's name
+     * @param birthDate the author's birth date
+     * @param deathDate the author's death date
+     * @param genre the genre the author writes in
      */
     public Author(final Name name, final Date birthDate, final Date deathDate, final String genre)
     {
         super(name, birthDate, deathDate);
-
+        this.genre = genre;
     }
 
     /**
+     * Creates and initializes a new Author who is still alive.
      *
-     * @param name
-     * @param birthDate
-     * @param genre
+     * @param name the author's name
+     * @param birthDate the author's birth date
+     * @param genre the genre the author wrote in.
      */
     public Author(final Name name, final Date birthDate, final String genre)
     {
-        //mm something seems imperfect about this but i can't be bothered to fix this rn sorry
         this(name, birthDate, null, genre);
     }
 
@@ -53,7 +54,25 @@ public class Author extends Person implements Printable
     }
 
     /**
-     * Prints the Auther and Genre.
+     * Gets the genre that this author writes in.
+     * @return the genre as a String.
+     */
+    public String getGenre()
+    {
+        return genre;
+    }
+
+    /**
+     * Switches the genre that the author writes in.
+     * @param newGenre The genre that they now write.
+     */
+    private void switchGenre(String newGenre)
+    {
+        this.genre = newGenre;
+    }
+
+    /**
+     * Prints the Author and Genre.
      */
     @Override
     public void display() {

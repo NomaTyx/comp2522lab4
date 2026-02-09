@@ -30,7 +30,14 @@ public class Name implements Printable
         this.last = last;
     }
 
-    private static void validateNamePart(final String value, final String label)
+    /*
+     * Validates a part of a name.
+     *
+     * @param value the name to validate
+     * @param label what part of the name is being validated
+     * @throws IllegalArgumentException of the name is invalid
+     */
+    private static void validateNamePart(final String value, final String label) throws IllegalArgumentException
     {
         if(value == null || value.isBlank())
         {
@@ -55,7 +62,7 @@ public class Name implements Printable
     /**
      * Returns the full name as "first last".
      *
-     * @return full name
+     * @return full name as a String
      */
     @Override
     public String toString()

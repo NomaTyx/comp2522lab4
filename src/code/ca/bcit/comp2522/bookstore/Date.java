@@ -362,6 +362,9 @@ public class Date implements Printable
         return false;
     }
 
+    /**
+     * Prints the date.
+     */
     @Override
     public void display()
     {
