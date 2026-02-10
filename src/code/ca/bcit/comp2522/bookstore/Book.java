@@ -116,7 +116,7 @@ public class Book implements Comparable<Book>, Printable, Reversible
     public void display()
     {
         System.out.print("Book \"" + title + "\" was published in "
-                + yearPublished + " and was written by " + author.getName().toString());
+                + yearPublished + " and was written by " + author.getName().toString() + ". ");
     }
 
     /**

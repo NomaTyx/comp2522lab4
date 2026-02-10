@@ -160,5 +160,23 @@ public class Main
         autoGandhi.display();
         autoAngelou.display();
         autoMalcolmX.display();
+
+        int result1 = book1984.compareTo(bookMobyDick);
+        System.out.println("Result of book1984.compareTo(bookMobyDick): " + result1);
+
+        int result2 = bookPrideAndPrejudice.compareTo(bookGreatGatsby);
+        System.out.println("Result of bookPrideAndPrejudice.compareTo(bookGreatGatsby): " + result2);
+
+        boolean isEqual = bookToKillAMockingbird.equals(book1984);
+        System.out.println("Does To Kill a Mockingbird equal 1984? " + isEqual);
+
+        int bioCompare = bioSteveJobs.compareTo(bioEinstein);
+        System.out.println("Comparison of Steve Jobs vs Einstein bios: " + bioCompare);
+
+        int authorCompare = authorCaro.compareTo(authorIsaacson);
+        System.out.println("Comparison of Author Caro vs Author Isaacson: " + authorCompare);
+
+        boolean sameAuthor = authorIsaacson.equals(bioEinstein.getAuthor());
+        System.out.println("Are the authors of Jobs and Einstein bios the same? " + sameAuthor);
     }
 }
